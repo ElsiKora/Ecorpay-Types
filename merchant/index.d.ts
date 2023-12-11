@@ -2,6 +2,7 @@ import *  as MerchantType from './merchant/merchant.t';
 import * as WaysType from './ways/ways.t';
 import * as DepositType from './deposit/deposit.t';
 import * as TransferType from './transfer/transfer.t';
+import * as WalletType from './wallet/wallet.t';
 import { TPaginationResponse } from '../shared/shared.t';
 
 export declare namespace Merchant {
@@ -21,5 +22,9 @@ export declare namespace Merchant {
   namespace Transfer {
     export type TCreate = TransferType.ICreate;
     export type TResponse = TransferType.IResponse;
+  };
+  namespace Wallet {
+    export type TCreate = WalletType.ICreate;
+    export type TResponse = WalletType.IResponse;
   };
 }
