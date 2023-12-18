@@ -9,7 +9,6 @@ import { TPaginationResponse } from '../shared/shared.t';
 
 export declare namespace User {
   namespace Balance {
-    export type TCreate = BalanceType.ICreate;
     export type TFindByTd = BalanceType.IFindById;
     export type TResponse = BalanceType.IResponse;
     export type TResponsePagination = TPaginationResponse<BalanceType.IResponse>
