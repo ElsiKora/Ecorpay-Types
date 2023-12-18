@@ -4,6 +4,7 @@ import * as WalletType from './wallet/wallet.t';
 import * as UserType from './user/user.t';
 import * as WayType from './way/way.t';
 import * as DepositType from './payment/deposit/deposit.t';
+import * as TransferType from './payment/transfer/transfer.t';
 import { TPaginationResponse } from '../shared/shared.t';
 
 export declare namespace User {
@@ -17,12 +18,12 @@ export declare namespace User {
     export type TPatch = UserType.ICreate;
     export type TResponse = UserType.IResponse;
   }
-  namespace Way {
+  namespace Way{
     export type TFindById = WayType.IFindById;
     export type TResponse = WayType.IResponse;
     export type TResponsePagination = TResponsePagination<WayType.IResponse>;
   }
-  namespace Way {
+  namespace CryptoWay {
     export type TFindById = WalletType.IFindById;
     export type TResponse = WalletType.TResponse;
   }
@@ -38,9 +39,18 @@ export declare namespace User {
   }
   namespace Deposit {
     export type TCreate = DepositType.ICreate;
-    export type TResponseCreate = DepositType.TResponseCreate;
-    export type TPaginationFilters = DepositType.TPaginationFilters;
+    export type TFindById = DepositType.IFindById;
+    export type TResponseCreate = DepositType.IResponseCreate;
+    export type TPaginationFilters = DepositType.IPaginationFilters;
     export type TResponse = DepositType.ICreate;
     export type TResponsePagination = TPaginationResponse<DepositType.IResponse>
+  }
+  namespace Transfer {
+    export type TCreate = TransferType.ICreate;
+    export type TFindById = TransferType.IFindById;
+    export type TResponseCreate = TransferType.IResponseCreate;
+    export type TPaginationFilters = TransferType.IPaginationFilters;
+    export type TResponse = TransferType.ICreate;
+    export type TResponsePagination = TPaginationResponse<TransferType.IResponse>
   }
 }
